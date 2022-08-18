@@ -1,4 +1,7 @@
 import numpy as np
+from typing import Union
+# ###############################################
+from ..code import Code
 # ###############################################
 
 
@@ -30,6 +33,8 @@ class Symbols:
         return code
     # ###############################################
 
-    def to_sym(self, code: np.ndarray) -> str:
+    def to_sym(self, code: Union[np.ndarray, Code]) -> str:
+        if isinstance(code, Code):
+            code = code.value
         return ''.join(self.symbols[code])
     # ###############################################

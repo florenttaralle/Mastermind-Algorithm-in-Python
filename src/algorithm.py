@@ -82,7 +82,7 @@ class Algorithm:
 
         self.reset(game)
         while game:
-            if (first_guess is not None) and (len(self.game.state.steps) == 0):
+            if (first_guess is not None) and (len(self.game) == 0):
                 guess = first_guess
             else:
                 guess = self.next_guess()
