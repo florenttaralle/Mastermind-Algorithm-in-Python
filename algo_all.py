@@ -42,10 +42,7 @@ for solution in trange(len(game.codes)):
 # ########################################
 
 first_guess = game[0].guess
-print('First Guess: %s (%r)' % (
-    symbols.to_sym(first_guess),
-    first_guess
-))
+print('First Guess: %s' % symbols.to_sym(first_guess))
 print('Mean: %.2f' % np.mean(nb_guesses))
 print('Max:  %d' % max(nb_guesses))
 # ########################################
